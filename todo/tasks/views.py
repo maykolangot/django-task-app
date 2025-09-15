@@ -10,7 +10,7 @@ def index(request):
 
     context = {'tasks': tasks}
 
-    return render(request, 'tasks/tasks.html' context=tasks)
+    return render(request, 'tasks/tasks.html', context=tasks)
 
 
 
