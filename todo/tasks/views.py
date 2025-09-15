@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 from .models import Task
@@ -11,6 +11,16 @@ def index(request):
     form = TaskForm()
 
     tasks = Task.objects.all()
+
+    if request.method == "POST":
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/')
+        
+
+
+
 
     context = {'tasks': tasks,
                'TaskForm': form}
