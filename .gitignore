@@ -1,10 +1,13 @@
-.env
+todo/.env
 
-./tasks/__pychache__/
+./todo/tasks/__pychache__/
 *.pyc
 
 
 
-./todo/__pychache__/
-
+./todo/todo/__pychache__/
 *.pyc
+
+
+./todo/db.sqlite3
+
