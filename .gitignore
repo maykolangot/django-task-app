@@ -1,4 +1,10 @@
 .env
 
-/tasks/__pychache__/
-/todo/__pychache__
+./tasks/__pychache__/
+*.pyc
+
+
+
+./todo/__pychache__/
+
+*.pyc
