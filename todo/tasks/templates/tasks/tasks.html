@@ -21,6 +21,7 @@
 
 
         </form>
+        <br>
 
     </div>
 
@@ -28,6 +29,15 @@
 
         {% for task in tasks %}
         <p>{{ task }}</p>
+
+
+        {% if task.completed == True %}
+            <p>Task Completed</p>
+
+        {% else %}
+            <p>Task not yet completed</p>
+
+        {% endif %}
         <a href="{% url 'update-task' task.id %}">
             Update Task
         </a>
@@ -35,6 +45,9 @@
         <a href="{% url 'delete-task' task.id %}">
             Delete Task
         </a>
+        <br>
+        <br>
+
         {% endfor %}
 
     </div>
